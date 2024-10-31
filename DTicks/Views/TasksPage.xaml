@@ -19,19 +19,19 @@
                             <SwipeView.RightItems>
                                 <SwipeItems>
                                     <SwipeItem
-                                        BackgroundColor="Red"
-                                        Command="{Binding Source={x:Reference TaskListView}, Path=BindingContext.DeleteCommand}"
-                                        CommandParameter="{Binding .}"
-                                        Text="Delete"/>
+                                            BackgroundColor="Blue"
+                                            Command="{Binding Source={RelativeSource AncestorType={x:Type vm:TasksViewModel}}, Path=ItemSwiped}"
+                                            CommandParameter="{Binding .}"
+                                            Text="Modify"/>
                                 </SwipeItems>
                             </SwipeView.RightItems>
                             <SwipeView.LeftItems>
                                 <SwipeItems>
                                     <SwipeItem
-                                        BackgroundColor="Blue"
-                                        Command="{Binding Source={RelativeSource AncestorType={x:Type vm:TasksViewModel}}, Path=ItemSwiped}"
+                                        BackgroundColor="Red"
+                                        Command="{Binding Source={x:Reference TaskListView}, Path=BindingContext.DeleteCommand}"
                                         CommandParameter="{Binding .}"
-                                        Text="Modify"/>
+                                        Text="Delete"/>
                                 </SwipeItems>
                             </SwipeView.LeftItems>
                             <Frame
@@ -68,8 +68,6 @@
                                             Command="{Binding Source={x:Reference TaskListView}, Path=ItemCheckedBind}"
                                            />
                                         </CheckBox.Behaviors>-->
-
-                                        
                                     </CheckBox>
                                 </Grid>
                             </Frame>
