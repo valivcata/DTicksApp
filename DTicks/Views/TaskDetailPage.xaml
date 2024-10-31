@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DTicks.Views.TaskDetailPage"
+             Title="{Binding PageTitle}"
+             Shell.NavBarIsVisible="False"
+             Shell.PresentationMode="ModalAnimated">
+    <VerticalStackLayout Padding="15" Spacing="3">
+        <Label FontSize="Medium" Text="Text" />
+        <Entry FontSize="Medium" Text="{Binding Title}" IsReadOnly="True"/>
+        <Label FontSize="Medium" Text="Description" />
+        <Editor
+            Margin="0"
+            AutoSize="TextChanges"
+            FontSize="Medium"
+            Text="{Binding Description}" 
+            IsReadOnly="True"/>
+        <Button
+            Command="{Binding GoBackCommand}"
+            HorizontalOptions="FillAndExpand"
+            Text="Go back" />
+    </VerticalStackLayout>
+</ContentPage>

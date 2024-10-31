@@ -48,6 +48,8 @@ Thumbs.db
 
 .vscode/
 
+.vs/
+
 ## Rider settings folder
 
 .idea/
