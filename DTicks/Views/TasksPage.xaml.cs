@@ -11,15 +11,15 @@ public partial class TasksPage : ContentPage
 
 		BindingContext = tasksViewModel;
 	}
-    protected override void OnAppearing()
-    {
-        base.OnAppearing();
+	protected override void OnAppearing()
+	{
+		base.OnAppearing();
 		(BindingContext as TasksViewModel)?.OnAppearing();
-    }
+	}
 
-    private void taskCheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
-    {
-        var send = (TaskItem)((CheckBox)sender).BindingContext;
-        ((TasksViewModel)this.TaskListView.BindingContext).ItemChecked.Execute(send);
-    }
+	//  private void taskCheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
+	//  {
+	//      var send = (TaskItem)((CheckBox)sender).BindingContext;
+	//      ((TasksViewModel)this.TaskListView.BindingContext).ItemChecked.Execute(send);
+	//  }
 }

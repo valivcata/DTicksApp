@@ -32,12 +32,14 @@ namespace DTicks
             builder.Services.AddTransient<NewTaskPage>();
             builder.Services.AddTransient<TaskModifyPage>();
             builder.Services.AddTransient<TaskDetailPage>();
+            builder.Services.AddTransient<CompletedTasksPage>();
 
             // register viewmodels
             builder.Services.AddSingleton<TasksViewModel>();
             builder.Services.AddTransient<NewTaskViewModel>();
             builder.Services.AddTransient<TaskModifyViewModel>();
             builder.Services.AddTransient<TaskDetailViewModel>();
+            builder.Services.AddTransient<CompletedTasksViewModel>();
 
             var app = builder.Build();
 

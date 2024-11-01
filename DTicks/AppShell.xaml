@@ -8,8 +8,13 @@
     Shell.FlyoutBehavior="Disabled"
     Title="DTicks">
 
-    <ShellContent
-        Title="TasksPage"
-        ContentTemplate="{DataTemplate views:TasksPage}"/>
+    <TabBar>
+        <ShellContent
+                Title="TasksPage"
+                ContentTemplate="{DataTemplate views:TasksPage}"/>
+        <ShellContent
+                Title="Completed Tasks"
+                ContentTemplate="{DataTemplate views:CompletedTasksPage}"/>
+    </TabBar>
 
 </Shell>

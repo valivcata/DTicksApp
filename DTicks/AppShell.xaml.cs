@@ -10,6 +10,7 @@ namespace DTicks
             Routing.RegisterRoute(nameof(TaskDetailPage), typeof(TaskDetailPage));
             Routing.RegisterRoute(nameof(TaskModifyPage), typeof(TaskModifyPage));
             Routing.RegisterRoute(nameof(NewTaskPage), typeof(NewTaskPage));
+            Routing.RegisterRoute(nameof(CompletedTasksPage), typeof(CompletedTasksPage));
         }
     }
 }

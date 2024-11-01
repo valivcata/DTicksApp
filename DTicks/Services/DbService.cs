@@ -52,20 +52,20 @@ namespace DTicks.Services
             
         }
 
-        //public static Task<List<TaskItem>> GetItemsNotDoneAsync()
-        //{
-        //    return Database.Table<TaskItem>().Where(i => !i.IsDone).ToListAsync();
-        //}
+        public static Task<List<TaskItem>> GetItemsNotDoneAsync()
+        {
+            return Database.Table<TaskItem>().Where(i => !i.IsDone).ToListAsync();
+        }
 
-        //public static Task<List<TaskItem>> GetItemsDoneAsync()
-        //{
-        //    return Database.Table<TaskItem>().Where(i => i.IsDone).ToListAsync();
-        //}
+        public static Task<List<TaskItem>> GetItemsDoneAsync()
+        {
+            return Database.Table<TaskItem>().Where(i => i.IsDone).ToListAsync();
+        }
 
-        //public static Task<List<TaskItem>> GetItemsForSearch(string newValue)
-        //{
-        //    return Database.Table<TaskItem>().Where(i => i.Title.Contains(newValue.ToLower(), StringComparison.CurrentCultureIgnoreCase)).ToListAsync();
-        //}
+        public static Task<List<TaskItem>> GetItemsForSearch(string newValue)
+        {
+            return Database.Table<TaskItem>().Where(i => i.Title.Contains(newValue.ToLower(), StringComparison.CurrentCultureIgnoreCase)).ToListAsync();
+        }
 
         public static Task<int> UpsertAsync(TaskItem item)
         {
